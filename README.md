@@ -5,9 +5,9 @@
 * 확장성을 고려한 선택을 해보자
 
 * 현재 구상
-  * Client : Electron, JS
-  * View : React, Zustand
-  * Background : JS, Python
+  * Desktop App : Electron, JS
+  * Client View : React, Zustand
+  * Client Background : JS, Python
   * API server : JAVA SpringBoot
   * Database : MySQL
  
