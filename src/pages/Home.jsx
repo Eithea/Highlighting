@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Home() {
     return (
         <div>
-            <input />
+            홈<br/>
             <Link to="/archive-viewer">
                 <button> 아카이브 뷰어 </button>
             </Link>

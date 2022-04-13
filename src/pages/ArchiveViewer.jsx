@@ -1,15 +1,27 @@
-import { Link } from "react-router-dom";
+import Header from "../components/header/Header";
 
 function ArchiveViewer() {
     return (
         <div>
-            아카이브 뷰어
-            <Link to="/clip-collections">
-                <button> 클립 모음 </button>
-            </Link>
-            <Link to="/">
-                <button> 홈 </button>
-            </Link>
+            <Header/>
+            <div classname = 'ArchiveViewer'>
+                <div classname = 'Viewers'>
+                    <div classname = 'Broadcast'>
+                        <div classname = 'Video'>
+                            
+                        </div>
+                        <div classname = 'Chat'>
+
+                        </div>
+                    </div>
+                    <div classname = 'Data'>
+                        
+                    </div>
+                </div>
+                <div classname = 'Sidebar'>
+
+                </div>
+            </div>
         </div>
     );
 }
