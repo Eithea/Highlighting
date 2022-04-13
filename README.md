@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Highlighting
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* 팀 프로젝트는 끝났지만 아쉬운 부분들이 남는다
+  * 시간과 역량의 부족으로 기술/언어 선택, 구현 방향 등에 타협했던 점
+  * 나와 팀원들의 성장과 경험을 목적으로 하여 실제 프로덕트로써의 효용성과는 거리가 멀어졌던 점
+  * 좋은 아이템이고 확장할 아이디어가 많은데 이른 시기에 마무리된 점 등등
+<br/><br/>
+* 편집자가 아닌 일반인(팬)을 위한 서비스로 다시 만들어보자
+  * 쏟아져나오는 수많은 크리에이터들의 방송영상 중 특별한 장면만 골라 볼 수 있도록
+  * 원하는 장면은 클립으로 모아 유튜브, 트위치 등 플랫폼에 구분되지 않고 한데 모아 볼 수 있도록
+  * 유저 백그라운드의 데이터를 서버에 모아 빠른 호출을 지원하고 다른 사람들과의 클립 공유가 가능하도록
+<br/><br/>
+* 바닥부터 다시 만들면서 공부
+  * 다른 기술 스택을 경험하고, 다른 구조로 디자인하며 만들어보기
+  * 확장성을 고려한 선택을 해보자
+<br/><br/>
+* 현재 구상
+  * Desktop App : Electron, JS
+  * Client View : React, Zustand
+  * Client Background : JS, Python
+  * API server : JAVA Spring Boot, Nginx
+  * Database : MySQL
+<br/><br/>
+# 개발 일지
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 04.13 (수)
+* 02:00 AM ~ 04:00 AM
+  * Create React App, Electron 초기 세팅
+  * 초기 디자인은 메인 홈페이지, 방송 아카이브 뷰어, 클립 모음의 3 page 구성
+  * HashRouter - Switch - Link를 이용한 3 page 간의 link 이동 구현
