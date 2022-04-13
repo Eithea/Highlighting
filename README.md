@@ -28,3 +28,9 @@
   * Create React App, Electron 초기 세팅
   * 초기 디자인은 메인 홈페이지, 방송 아카이브 뷰어, 클립 모음의 3 page 구성
   * HashRouter - Switch - Link를 이용한 3 page 간의 link 이동 구현
+
+## 04. 14 (목)
+* 00:00 AM ~ 03:00 AM
+  * 아카이브 뷰어 page 와이어프레임 디자인, 컴포넌트 설계
+  * sass install
+  * 와이어프레임에 따라 컴포넌트를 배치할 cover div style scss 작성
