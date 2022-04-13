@@ -1,0 +1,49 @@
+.Cover-ArchiveViewer {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+    background-color: rgb(255, 193, 193);
+    height: 90vh;
+
+    .Cover-Viewers {
+        display: flex;
+        flex-direction: column;
+        border: 3px solid black;
+        width: 80%;
+
+        .Cover-Broadcast {
+            display: flex;
+            flex-direction: row;
+            border: 3px solid black;
+            height: 60%;
+            
+            .Cover-Video {
+                display: flex;
+                flex-direction: column;
+                border: 3px solid black;
+                width: 70%;
+            }
+
+            .Cover-Chat {
+                display: flex;
+                flex-direction: column;
+                border: 3px solid black;
+                width: 30%;
+            }
+        }
+
+        .Cover-Data {
+            display: flex;
+            flex-direction: row;
+            border: 3px solid black;
+            height: 40%;
+        }
+    }
+
+    .Cover-Sidebar {
+        display: flex;
+        flex-direction: column;
+        border: 3px solid black;
+        width: 20%;
+    }
+}
