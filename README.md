@@ -55,3 +55,11 @@
 
 <br/>
 
+## 04. 15 (금)
+### 00:20 AM ~ 01:50 AM
+* Server 기술 선택을 위한 언어 조사
+* Go 환경 세팅 및 기초 문법 예제
+* http 모듈을 이용한 localhost server 구현
+* GET method
+
+<br/>
