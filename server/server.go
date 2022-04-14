@@ -32,5 +32,5 @@ func main() {
 
 	http.HandleFunc("/GETtest_dynamic", handler_GET_dynamic)
 
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":8080", nil)
 }
