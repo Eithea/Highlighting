@@ -13,7 +13,11 @@ func handler_path1(w http.ResponseWriter, r *http.Request) {
 }
 
 func handler_path2(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "2222")
+	q := r.URL.Query().Get("q")
+	if q == "" {
+		q = "nothing"
+	}
+	fmt.Fprint(w, q)
 }
 
 
