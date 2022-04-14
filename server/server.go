@@ -8,16 +8,19 @@ func handler_home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "home")
 }
 
-func handler_path1(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "1111")
+func handler_GET_static(w http.ResponseWriter, r *http.Request) {
+	// do some static logic
+	fmt.Fprint(w, "result of GET")
 }
 
-func handler_path2(w http.ResponseWriter, r *http.Request) {
+func handler_GET_dynamic(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query().Get("q")
 	if q == "" {
 		q = "nothing"
 	}
-	fmt.Fprint(w, q)
+	// do some dynamic logic
+	fmt.Fprint(w, "result of GET\n")
+	fmt.Fprint(w, "q is " + q)
 }
 
 
@@ -25,9 +28,9 @@ func handler_path2(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", handler_home)
 
-	http.HandleFunc("/path1", handler_path1)
+	http.HandleFunc("/GETtest_static", handler_GET_static)
 
-	http.HandleFunc("/path2", handler_path2)
+	http.HandleFunc("/GETtest_dynamic", handler_GET_dynamic)
 
 	http.ListenAndServe(":3000", nil)
 }
