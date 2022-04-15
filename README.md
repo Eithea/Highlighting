@@ -63,3 +63,14 @@
 * GET method
 
 <br/>
+
+## 04. 16 (토)
+### 02:00 AM ~ 05:30 AM
+* Go Modlue 공부, go mod 세팅
+* route 모듈로 분리
+* input data를 JSON화하는 모듈 구현
+* 서버 response를 JSON으로 변경
+* MySQL 설치, 예제 DB 생성
+* Go - MySQL 연동
+
+<br/>

@@ -11,12 +11,22 @@ func struct_JSON(inp interface{}) []byte {
 	return ret
 }
 
-type testdata struct {
+type test1 struct {
 	Field1 string
 	Field2 int
 }
 
-func Struct_testdata(f1 string, f2 int) []byte {
-	st_ret := testdata{f1, f2}
+func Struct_test1(f1 string, f2 int) []byte {
+	st_ret := test1{f1, f2}
+	return struct_JSON(st_ret)
+}
+
+type test2 struct {
+	Field1 string
+	Field2 int
+}
+
+func Struct_test2(f1 string, f2 int) []byte {
+	st_ret := test2{f1, f2}
 	return struct_JSON(st_ret)
 }

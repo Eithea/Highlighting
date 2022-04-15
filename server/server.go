@@ -7,11 +7,9 @@ import (
 
 
 func main() {
-	http.HandleFunc("/", route.Handler_home)
-
-	http.HandleFunc("/GETtest_static", route.Handler_GET_static)
-
-	http.HandleFunc("/GETtest_dynamic", route.Handler_GET_dynamic)
+	http.HandleFunc("/", route.Home)
+	http.HandleFunc("/t1", route.Test1)
+	http.HandleFunc("/t2", route.Test2)
 
 	http.ListenAndServe(":8080", nil)
 }
