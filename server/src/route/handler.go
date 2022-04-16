@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"src/json"
+	"src/db"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
@@ -21,5 +22,6 @@ func Test2(w http.ResponseWriter, r *http.Request) {
 		q = "nothing"
 	}
 	// do some dynamic logic
+	db.Dbtest(q, w)
 	fmt.Fprint(w, string(json.Struct_test2(q, 123)))
 }

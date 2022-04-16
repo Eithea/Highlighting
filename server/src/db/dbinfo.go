@@ -10,4 +10,4 @@ type dbinfo struct {
 	dbname string
 }
 
-var testDB = dbinfo{"root", secret.PW, secret.ADDR, "mysql", "test"}
+var TestDB = dbinfo{"root", secret.PW, secret.ADDR, "mysql", "test"}
