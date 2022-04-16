@@ -1,0 +1,31 @@
+유저가 아카이브 링크를 추가
+
+Client View : 링크 파싱하여 platform, video_id 결정
+Client View -> API Server : platform, video_id 전달
+API Server <-> DB : platform, video_id에 해당하는 data search (nullable)
+API Server -> Client View : data 전달
+Client View : data가 not null일 경우 데이터 컴포넌트 뷰
+Client View : data가 null일 경우 데이터 컴포넌트 대신 분석하기 버튼 뷰
+
+
+유저가 데이터 분석 버튼을 누름
+
+Client View -> Client Background : platform, video_id 전달
+Client Background : 분석 스크립트 수행하여 data 생성
+Client Background -> API Server : platform, video_id, data 전달
+API Server -> DB : data insert
+API Server -> Client Background : success 전달
+Client Background -> Client View : success 전달
+Client View <-> API Server : data 재수신
+
+DB 구조 : 
+table : platform마다 하나씩
+columns : video_id, 분석 데이터들
+
+API Server에 필요한 라우팅 함수 : 
+1. C-Back이 platform, video_id, data를 송신하면 DB table {platform}에 video_id, data를 insert하고 return success
+2. C-View가 platform, video_id를 송신하면 DB table {platform}에서 where video_id = {video_id}인 row를 select하여 return data
+
+
+* 서버 부하를 줄이기 위해 electron local store를 써서 로컬 캐싱, 서버 요청 전에 확인하면 좋을듯
+* 구현해도 서버가 할 일은 달라지지 않으니 나중에 클라이언트 백그라운드 디자인할 때 구체화하자

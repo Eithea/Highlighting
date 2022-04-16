@@ -29,8 +29,7 @@
   * Desktop App : Electron, JS
   * Client View : React, Zustand
   * Client Background : JS, Python
-  * API Server : Java Spring Boot, Node.js, Django 중 택일
-  * Reverse Proxy Server : Nginx
+  * API Server : Go, Nginx
   * Database : MySQL
 
 <br/><br/>
@@ -71,6 +70,18 @@
 * input data를 JSON화하는 모듈 구현
 * 서버 response를 JSON으로 변경
 * MySQL 설치, 예제 DB 생성
-* Go - MySQL 연동
 
 <br/>
+
+## 04. 17 (일)
+### 02:00 AM ~ 05:00 AM
+* Go - MySQL 연동
+* Go - MySQL 조작 연습 위한 test table 생성
+* database/sql 모듈 사용법 연습
+* server querystring으로 들어온 data를 insert, select하는 기능 구현
+* 아카이브 뷰어 page의 data view 비즈니스 로직 디자인
+* 이에 따른 DB 구조, API Server 설계
+  * [txt](./archiveviewerlogic.txt)   
+
+<br/>
+
