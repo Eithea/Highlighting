@@ -1,3 +1,18 @@
+기존(팀플) : 
+유저가 링크 추가시 client의 요청에 따라 server가 분석 수행 후 data view
+
+문제점 : 
+너무 무거운 분석 프로세스에 의한 server 부하
+쓸지 안쓸지 모르는 data를 위한 유저의 긴 대기
+
+개선 : 
+유저가 링크 추가시 client는 server에 DB 조회 요청
+client는 data 있으면 view, 없으면 분석하기 버튼 활성화
+유저 필요시 분석하기 버튼 눌러 data get 가능
+분석하기 버튼 누를시 server 대신 client background가 분석 수행
+server는 cli-back으로부터 결과만 받아 DB에 보관
+
+
 유저가 아카이브 링크를 추가
 
 Client View : 링크 파싱하여 platform, video_id 결정
@@ -12,11 +27,10 @@ Client View : data가 null일 경우 데이터 컴포넌트 대신 분석하기 
 
 Client View -> Client Background : platform, video_id 전달
 Client Background : 분석 스크립트 수행하여 data 생성
+Client Background -> Client View : data 전달
 Client Background -> API Server : platform, video_id, data 전달
 API Server -> DB : data insert
-API Server -> Client Background : success 전달
-Client Background -> Client View : success 전달
-Client View <-> API Server : data 재수신
+
 
 DB 구조 : 
 table : platform마다 하나씩
